@@ -1,0 +1,48 @@
+<app-navbar></app-navbar>
+<section class="section-cart container ">
+ 
+<div class="table-content table-responsive">
+  <table class="table table-hover text-center table-responsive">
+    <thead>
+      <tr class="text-center"> 
+        <th scope="col"> </th>
+        <th scope="col">Product</th>
+        <th scope="col">Price</th>
+        <th scope="col">QTY</th>
+        <th scope="col">SUBTOTAL</th>
+        <th scope="col"> </th>
+      </tr>
+    </thead>
+    <tbody>
+    
+      <tr  *ngFor="let data of cartProduct ; let index=index">
+        <th scope="row"><div style="width: 200px; height:30vh; margin: auto;">
+          <img class="w-100 h-100" src="{{data.item.image}}">
+        </div></th>
+        <td>{{data.item.title}}</td>
+        <td>{{data.item.price}}</td>
+        <td style="width: 30%;"><span>
+          <button class="bt" (click)="plusQuantity(index)"> + </button>
+          <input type="number"min="1" class="formControl" [(ngModel)]="data.quantity" (change)="detectQuantity()">
+          <button class="bt" min="1" (click)="minsQuantity(index)"> - </button>
+
+        </span></td>
+        <td>{{data.item.price * data.quantity}}</td>
+        <td><td><i class="fa fa-trash trash" (click)="deleteSingleProduct(index)"   aria-hidden="true"></i></td>
+          
+      </tr>
+      
+    </tbody>
+  </table>
+</div>
+
+<div class="text-center success p-3 m-3" *ngIf="success==true">
+  Successful <i class="fa fa-heart" aria-hidden="true"></i>
+</div>
+<div class="d-flex justify-content-around mb-4 mt-4">
+  <button class="btn"(click)="order()">Save Order</button>
+  <button class="btn" (click)="delete_order()">Delete Order</button>
+</div>
+</section>
+
+

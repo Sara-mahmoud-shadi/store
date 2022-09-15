@@ -1,0 +1,125 @@
+nav{
+    background-color: white;
+    box-shadow: 3px 3px 6px rgb(240, 238, 238);
+    width: 100% !important;
+    position: fixed;
+    z-index: 2;
+    top:0;
+    height: 80px !important;
+}
+.list-style{
+   list-style: none;
+}
+.fl{
+    float: left;
+}
+.fr{
+    float: right;
+}
+.icon-bar{
+    display: none;
+}
+.link{
+    margin-top: -6px !important;
+    width: 40%;
+    margin-left: 45%;
+}
+.link li{
+    font-size: 1.2rem;
+}
+
+.link li :hover{
+    color: orange;
+    padding-bottom: 20px !important;
+    border-bottom: 1px solid;
+}
+.sotial{
+    position: absolute;
+    bottom: 8px;
+    width: 80%;
+    left: 9%;
+  
+}
+.sotial a{
+
+    color: white;
+    padding-left: 3%;
+    font-size: 1.5rem;
+    text-decoration: none;
+}
+.sotial .face:hover{
+    color: blue;
+}
+.sotial .linkin:hover,.sotial .twitter:hover{
+    color: rgb(62, 145, 212);
+}
+.sotial .youtube:hover{
+    color: red;
+}
+.nav-bar{
+   
+ 
+}
+.nav-bar-show{
+    right: 0 !important;
+}
+@media(max-width:992px){
+    nav .link {
+        display: none !important;
+    }
+    .icon-bar,.exit{
+        display: block;
+        font-size: 1.4rem !important;
+        cursor: pointer;
+    }
+    .exit{
+        margin-top: 3%;
+        font-size: 1.5rem !important;
+    }
+    .nav-bar{
+        position: fixed;
+        top: 0;
+        bottom: 0;
+        transition: 1s;
+        right: -600px ;
+        width: 60%;
+        z-index: 3;
+        background-color: rgb(255, 166, 0);
+
+    }
+    .logo-bar{
+        background-color: white;
+        padding: 7% 0 6% 0;
+       
+        display: flex;
+        justify-content: space-around;
+    }
+     .content  {
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .nav-bar ul{
+        text-align: center;
+       
+        width: 70%;
+       
+    }
+    .nav-bar ul li{
+        margin-bottom: 10%;
+       font-size: 1.1rem;
+      
+    }
+    .nav-bar ul li a{
+        font-weight: bold;
+        padding-bottom: 5%;
+        border-bottom: 1.2px dotted;
+        color: black !important;
+    }
+    .nav-bar ul li :hover{
+        color: rgb(63, 63, 63) !important;
+    }
+  
+}
+

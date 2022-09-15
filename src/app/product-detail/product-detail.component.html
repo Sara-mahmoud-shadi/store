@@ -1,0 +1,28 @@
+
+
+
+
+<section>
+    <app-navbar></app-navbar>
+    <div class="container">
+
+   
+    <div class="row   details">
+
+        <div class="col-sm-12 col-md-6 img " >
+            <img src="{{productDetail.image}}" class="w-100 h-100" >
+        </div>
+        
+        <div class="col-sm-12 col-md-6 d-flex justify-content-center align-items-center mb-5" >
+            <div >
+                <h3 style="text-align: center"> {{productDetail.title}}</h3>    
+                
+                <p style="text-align: center">{{productDetail.description}}</p>
+                <span><span style="color: rgb(255, 94, 0);"> Number Of Products :</span>  {{productDetail.rating.count}} </span>
+                <span style="float:right"> <span style="color: rgb(255, 94, 0);">price :</span>   {{productDetail.price}} EGP</span>
+            </div>
+       
+        </div>
+        </div>
+    </div>
+</section>

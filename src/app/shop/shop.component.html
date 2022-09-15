@@ -1,0 +1,55 @@
+
+<section>
+   <app-navbar></app-navbar>
+   <div class="banner-bg">
+    <img class="w-100 h-100 " src="assets/images/banner-bg.jpg">
+    <h1> Shop Category </h1>
+   </div>
+ 
+   <div class="container mt-5 "> 
+    <div class=" d-flex justify-content-center filter">
+      <select class="change-category" (change)="getValueCategory($event)">
+        <option  selected disabled>choose a category</option>
+         <option value="all" >All</option>
+         <option value="{{info}}" *ngFor="let info of allCtegories">{{info}}</option>
+     </select>
+     
+     <input type="text" placeholder="search by product" [(ngModel)]="term">
+ 
+    </div>
+    
+    <div class="container row  mt-4 content">
+    
+        <div class="card col-sm-12 col-lg-4 col-md-6 p-4"  *ngFor="let info of allProducts |filter:term">
+    
+          <div routerLink="/productDetail/{{info.id}}">
+            <div class="img-product w-75 mt-4 ">
+              <img src="{{info.image}}" class="w-100 h-100" style="height: 100%;">
+            </div>
+            
+            <div class="text">
+              <h6 >{{info.title}}</h6>
+              <p><span style="color: rgb(255, 94, 0); font-size: 1.3rem;" > price :</span> {{info.price}} </p>
+            </div>
+          </div>
+
+
+          <div class="d-flex icon justify-content-center ">
+            <i class="fa fa-shopping-basket i" aria-hidden="true"  *ngIf="!add[info.id] && islogin " (click)="add[info.id]=true"></i>
+           
+            <span class="d-flex w-50 p-2 " *ngIf="add[info.id]"> <input class="w-75" min="1" type="number" [(ngModel)]="amount">
+              <button class=""  (click)="addCart(info);add[info.id]=false"><i class="fa fa-plus" aria-hidden="true"></i></button>
+           </span>
+           <i class="fa fa-eye i" style="margin-left: 9px; font-size: 1.3rem;" aria-hidden="true" routerLink="/productDetail/{{info.id}}"></i>
+           
+          </div>
+          <br>
+
+             
+            </div>
+         
+    
+    </div>
+    </div>
+</section>
+

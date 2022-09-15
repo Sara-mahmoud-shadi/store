@@ -1,0 +1,105 @@
+<p>tes works!</p>
+<app-navbar></app-navbar>
+<section style="margin-top: 100px;">
+ 
+    <h3 class="text-center">Register</h3>
+    <div class="login">
+      
+        <form [formGroup]='signindata' (ngSubmit)="getdata(signindata)" >
+          <div class="d-md-flex justify-content-between">
+            <div class="form-group">
+         
+              <input formControlName='firstname' type="text" class="form-control w-100"   placeholder="Enter firstname">
+              <div *ngIf="signindata.get('firstname').invalid && signindata.get('firstname').touched "
+              class="text-danger">First Name Is Required</div>
+           </div>
+           <div class="form-group">
+           
+            <input formControlName='lastname' type="text" class="form-control w-100"  placeholder="Enter lastname">
+            <div *ngIf="signindata.get('lastname').invalid && signindata.get('lastname').touched "
+            class="text-danger">Last Name Is Required</div>
+         </div>
+          </div>
+        
+            <div class="form-group">
+         
+                <input  formControlName='username' type="text" class="form-control"  placeholder="Enter username">
+                <div *ngIf="signindata.get('username').invalid && signindata.get('username').touched "
+                class="text-danger">User Name Is Required</div>
+             </div>
+             
+            <div class="form-group">
+         
+              <input type="email" formControlName='email' class="form-control"  placeholder="Enter email">
+              <div *ngIf="signindata.get('email').invalid && signindata.get('email').touched "
+               class="text-danger">Email Is Required.</div>
+            </div>
+       
+            <div class="form-group">
+         
+                <input formControlName='password' type="password" class="form-control"  placeholder="Enter Password">
+                <div *ngIf="signindata.get('password').invalid && signindata.get('password').touched "
+               class="text-danger">Password Is Required</div>
+            </div>
+         
+            <div class="form-group">
+         
+              <input formControlName='phone' type="text" class="form-control"  placeholder="Phone">
+              <div *ngIf="signindata.get('phone').invalid && signindata.get('phone').touched "
+             class="text-danger">Phone Is Required</div>
+          </div>
+            
+            <label class="pb-2">Address :</label>
+            <div class="d-md-flex flex-wrap">
+              <div class="form-group">
+         
+                <input formControlName='city' type="text" class="form-control"  placeholder="Enter city">
+                <div *ngIf="signindata.get('city').invalid && signindata.get('city').touched "
+                class="text-danger">City Is Required</div>
+             </div>
+             <div class="form-group">
+         
+              <input formControlName='street' type="text" class="form-control"  placeholder="Enter street">
+              <div *ngIf="signindata.get('street').invalid && signindata.get('street').touched "
+              class="text-danger">Street Is Required</div>
+           </div>
+           <div class="form-group">
+         
+            <input formControlName='number' type="number" class="form-control"  placeholder="Enter number street">
+            <div *ngIf="signindata.get('number').invalid && signindata.get('number').touched "
+            class="text-danger">Number Is Required</div>
+         </div>
+         <div class="form-group">
+         
+          <input formControlName='zipcode' type="text" class="form-control"  placeholder="Enter zipcode">
+          <div *ngIf="signindata.get('zipcode').invalid && signindata.get('zipcode').touched "
+          class="text-danger">Zipcode Is Required</div>
+       </div>
+       
+            </div>
+            <label class="pb-2">geolocation :</label>
+            <div class="d-md-flex justify-content-between">
+  
+              <div class="form-group">
+           
+                <input formControlName='lat' type="text" class="form-control"  placeholder="Enter latitude">
+                <div *ngIf="signindata.get('lat').invalid && signindata.get('lat').touched "
+                class="text-danger">latitude Is Required</div>
+             </div>
+             <div class="form-group">
+           
+              <input formControlName='long' type="text" class="form-control"  placeholder="Enter longitude">
+              <div *ngIf="signindata.get('long').invalid && signindata.get('long').touched "
+              class="text-danger">longitude Is Required</div>
+           </div>
+            </div>
+  
+            
+              
+          
+              <button type="submit" [disabled]="signindata.invalid" class="btn">Register</button>
+            
+            
+          </form>
+    </div>
+</section>

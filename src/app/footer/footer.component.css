@@ -1,0 +1,38 @@
+.footer{
+    padding-top: 1%;
+    
+
+}
+.footer .section{
+    width: 33%;
+
+    margin-left: 1%;
+    
+}
+.bg-footer{
+    background-color: rgb(241, 241, 241);
+
+    height: 80vh !important;  
+}
+.footer a:hover{
+    color: rgb(221, 145, 3);
+}
+p{
+    font-size: 1.1rem;
+}
+.follow-us{
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+
+@media(max-width:767px){
+    .bg-footer{
+        height: 120vh !important;
+    }
+    .footer .section{
+        width: 100%;
+       
+        height: 210px;
+      
+    }
+}

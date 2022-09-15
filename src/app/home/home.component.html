@@ -1,0 +1,93 @@
+
+
+<section>
+  <app-navbar></app-navbar>
+<img src="assets/images/banner-bg.jpg">
+
+<div class="row content">
+
+<div class="col-sm-12 col-md-6 col-lg-5 col-xl-6 d-flex  justify-content-center align-items-center h-75">
+  <div class="text-content">
+      <h1> ONLINE SHOPPING  </h1>
+      <p> New  Collection ! Fashon Suppr Sale Offer</p>
+      <button routerLink="/shop"> Shop Now</button>
+  </div>
+</div>
+
+<div class=" col-lg-7 col-xl-6 d-none d-lg-block  h-75 img">
+  <img class="w-100 h-100 " src="assets/images/banner-img.png">
+</div>
+</div>
+
+</section>
+
+<section class="d-sm-block d-lg-flex container mt-5 second-secion  pt-5">
+  
+  <div class="col-lg-4  p-3" style="height: 90%;">
+    <img class="w-100 h-100" src="assets/images/c5.jpg">
+  </div>
+  <div class="col-lg-8  p-3  ">
+    <div class="img-friday  img1" > <img class="w-100 h-100" src="assets/images/image.jpg"> </div>
+
+    <div class="img-friday img2" > <img class="w-100 h-100"src="assets/images/Diamond Ring.jpg"> </div>
+    <div class="img-friday img3" > <img class="w-100 h-100"src="assets/images/s-l500.jpg"> </div>
+    <div class="img-friday img4" > <img class="w-100 h-100" src="assets/images/tv.jpg"> </div>
+
+   
+  </div>
+ 
+  
+</section>
+
+<div class="clear"></div>
+
+<section class="m-5" style="height:100%">
+
+  <div class="container text-center seller" >
+    <h1>
+      Sale Items
+    </h1>
+  
+    <div class="row ">
+  <div class="col-sm-12 col-md-6 col-lg-4 mb-5" *ngFor="let data of SaleItems">
+
+    <div class="img">
+      <img class=" w-100 h-100" src="https://{{data.imageUrl}}">
+    </div>
+    <div class="container mt-4">
+      <h5>{{data.name}} </h5>
+      <p ><span class="price"> Price : </span>  {{data.price.current.value}} EGP</p>
+    </div>
+    
+
+  </div>
+    </div>
+  </div>
+  
+</section>
+
+<section style="height:100%">
+
+  <div class="container text-center seller" >
+    <h1 >
+      Best Seller
+    </h1>
+  
+    <div class="row ">
+  <div class="col-sm-12 col-md-6 col-lg-4 mb-5 " *ngFor="let data of BestSeller">
+
+    <div class="img">
+      <img class=" w-100 h-100" src="https://{{data.imageUrl}}">
+    </div>
+    <div class="container mt-4">
+      <h5>{{data.name}} </h5>
+      <p><span class="price"> Price : </span> {{data.price.current.value}} EGP </p>
+    </div>
+    
+
+  </div>
+    </div>
+  </div>
+</section>
+
+
