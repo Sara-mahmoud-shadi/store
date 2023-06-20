@@ -13,8 +13,6 @@ export class HomeComponent implements OnInit {
   apiProduct:any=[];
   constructor(private _IngoProductsService:IngoProductsService) { 
 
-    
-    
 
     this._IngoProductsService.getProductsAsos().subscribe(data=>{
 

@@ -17,6 +17,7 @@ import { FooterComponent } from './footer/footer.component';
 import { ContactComponent } from './contact/contact.component';
 import { TesComponent } from './tes/tes.component';
 import { LoginComponent } from './login/login.component';
+import { SharedCardComponent } from './shared-card/shared-card.component';
 
 @NgModule({
   declarations: [
@@ -29,7 +30,8 @@ import { LoginComponent } from './login/login.component';
     FooterComponent,
     ContactComponent,
     TesComponent,
-    LoginComponent
+    LoginComponent,
+    SharedCardComponent,
   ],
   imports: [
     BrowserModule,

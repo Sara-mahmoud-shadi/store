@@ -55,10 +55,4 @@ export class TesComponent implements OnInit {
     this._AuthService.addUser(this.storeData).subscribe(data=>{
       this._AuthService.saveDataUser(data,this.storeData.username);
       this.Router.navigate(['/Login'])
-      console.log(data)
-    })
-    
-    
-  }
-
-}
+    })}}

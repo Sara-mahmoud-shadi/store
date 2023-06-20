@@ -46,7 +46,7 @@ export class IngoProductsService {
     return this._HttpClient.get(`https://fakestoreapi.com/products/${data}`)
   }
   save_order(model:any){
-    return this._HttpClient.post(`https://fakestoreapi.com/carts`,model);
+    return this._HttpClient.post( `https://fakestoreapi.com/carts`,model);
   }
 
 }

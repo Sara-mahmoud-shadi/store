@@ -1,4 +1,4 @@
-<app-navbar></app-navbar>
+
 <section class="section-cart container ">
  
 <div class="table-content table-responsive">
@@ -14,7 +14,6 @@
       </tr>
     </thead>
     <tbody>
-    
       <tr  *ngFor="let data of cartProduct ; let index=index">
         <th scope="row"><div style="width: 200px; height:30vh; margin: auto;">
           <img class="w-100 h-100" src="{{data.item.image}}">
@@ -44,5 +43,6 @@
   <button class="btn" (click)="delete_order()">Delete Order</button>
 </div>
 </section>
+
 
 

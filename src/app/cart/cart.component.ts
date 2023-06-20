@@ -19,11 +19,6 @@ export class CartComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  store(){
- for(let i of this.cartProduct){
-      this.store_product.push({productId:i.item.id,quantity:i.quantity});
-    }
-  }
   plusQuantity(index:number){
     this.cartProduct[index].quantity++;
     localStorage.setItem("cart",JSON.stringify(this.cartProduct));
@@ -48,8 +43,12 @@ export class CartComponent implements OnInit {
     this.cartProduct=[]
     localStorage.setItem("cart",JSON.stringify(this.cartProduct));
   }
+  store(){
+    for(let i of this.cartProduct){
+         this.store_product.push({productId:i.item.id,quantity:i.quantity});
+       }}
   order(){
-    this.store();
+   this.store();
    let storeProduct={
     userId:this._AuthService.storedata.id,
     date:new Date(),

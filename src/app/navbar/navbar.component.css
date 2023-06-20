@@ -56,10 +56,7 @@ nav{
 .sotial .youtube:hover{
     color: red;
 }
-.nav-bar{
-   
- 
-}
+
 .nav-bar-show{
     right: 0 !important;
 }
@@ -72,6 +69,7 @@ nav{
         font-size: 1.4rem !important;
         cursor: pointer;
     }
+    
     .exit{
         margin-top: 3%;
         font-size: 1.5rem !important;

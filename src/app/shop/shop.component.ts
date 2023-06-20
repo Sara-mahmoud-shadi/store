@@ -26,9 +26,7 @@ export class ShopComponent implements OnInit {
     });
 
     this._AuthService.storedata.subscribe((data:any)=>{
-      if(data)
-        this.islogin=true;
-      else this.islogin=false;
+      (data) ? this.islogin=true : this.islogin=false
     })
  
   }
@@ -43,23 +41,13 @@ export class ShopComponent implements OnInit {
   }
   getValueCategory(value:any){
 
-    if(value.target.value=='all'){
-      this.getproduct();
-    }
+    if(value.target.value=='all'){this.getproduct();}
     else{
-
-    
     this._IngoProductsService.getSingleCategory(value.target.value).subscribe(data=>{
-      
-      this.allProducts=data
-    })
-  }
-      
-  }
+    this.allProducts=data
+    })}}
 
   addCart(data:any){
-    
-
     if("cart" in localStorage){
       
       this.cartProduct=JSON.parse(localStorage.getItem("cart")!)
@@ -74,13 +62,5 @@ export class ShopComponent implements OnInit {
     else{
       this.cartProduct.push({item:data,quantity:this.amount});
       localStorage.setItem("cart",JSON.stringify(this.cartProduct));
-     
-    }
-    this.amount=0;
-    
-
-   
-    
-   
-  }
-}
+     }
+    this.amount=0;}}
